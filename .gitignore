@@ -15,6 +15,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -26,7 +27,9 @@ dist-ssr
 # TypeScript build info
 tsconfig.tsbuildinfo
 
-# Python cache
+# Python cache & virtual environment
 __pycache__/
 *.py[cod]
 *$py.class
+.venv/
+venv/
