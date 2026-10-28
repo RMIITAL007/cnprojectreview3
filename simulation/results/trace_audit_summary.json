@@ -1,0 +1,129 @@
+{
+  "Baseline": {
+    "total_lines": 28659,
+    "events": {
+      "+": 9562,
+      "-": 9552,
+      "r": 9545
+    },
+    "flows": {
+      "1": 28659
+    },
+    "packet_types": {
+      "tcp": 14364,
+      "ack": 14295
+    },
+    "drops_flow1": 0,
+    "drops_flow2": 0,
+    "drops_by_link": {},
+    "enqueues_flow2_node3": 0,
+    "total_drops": 0,
+    "server_flow1_packets": 2384,
+    "server_flow1_bytes": 2478360,
+    "server_flow2_packets": 0,
+    "server_flow2_bytes": 0,
+    "steady_state_5_10_flow1_pkts": 1202,
+    "steady_state_5_10_flow1_bytes": 1250080,
+    "duration_start": 0.0,
+    "duration_end": 10.00952,
+    "mathematical_reconciliation": {
+      "theoretical_generated": 0,
+      "enqueued_node3": 0,
+      "drops_flow2": 0,
+      "received_server_flow2": 0,
+      "accounted_packets": 0,
+      "conservation_difference": 0
+    }
+  },
+  "Attack (Unmitigated)": {
+    "total_lines": 431897,
+    "events": {
+      "+": 159698,
+      "-": 112513,
+      "r": 112506,
+      "d": 47180
+    },
+    "flows": {
+      "1": 10303,
+      "2": 421594
+    },
+    "packet_types": {
+      "tcp": 5236,
+      "ack": 5067,
+      "cbr": 421594
+    },
+    "drops_flow1": 24,
+    "drops_flow2": 47156,
+    "drops_by_link": {
+      "1->2": {
+        "2": 47156,
+        "1": 24
+      }
+    },
+    "enqueues_flow2_node3": 78125,
+    "total_drops": 47180,
+    "server_flow1_packets": 846,
+    "server_flow1_bytes": 878840,
+    "server_flow2_packets": 30969,
+    "server_flow2_bytes": 1238760,
+    "steady_state_5_10_flow1_pkts": 128,
+    "steady_state_5_10_flow1_bytes": 133120,
+    "duration_start": 0.0,
+    "duration_end": 10.009024,
+    "mathematical_reconciliation": {
+      "theoretical_generated": 78125,
+      "enqueued_node3": 78125,
+      "drops_flow2": 47156,
+      "received_server_flow2": 30969,
+      "accounted_packets": 78125,
+      "conservation_difference": 0
+    }
+  },
+  "Mitigated": {
+    "total_lines": 108069,
+    "events": {
+      "+": 39242,
+      "-": 29600,
+      "r": 29515,
+      "d": 9710
+    },
+    "flows": {
+      "1": 24161,
+      "2": 83906
+    },
+    "packet_types": {
+      "tcp": 12170,
+      "ack": 11991,
+      "cbr": 83906
+    },
+    "drops_flow1": 22,
+    "drops_flow2": 9688,
+    "drops_by_link": {
+      "1->2": {
+        "2": 9610,
+        "1": 22
+      },
+      "3->1": {
+        "2": 78
+      }
+    },
+    "enqueues_flow2_node3": 15625,
+    "total_drops": 9710,
+    "server_flow1_packets": 2000,
+    "server_flow1_bytes": 2079000,
+    "server_flow2_packets": 5937,
+    "server_flow2_bytes": 237480,
+    "steady_state_5_10_flow1_pkts": 1202,
+    "steady_state_5_10_flow1_bytes": 1250080,
+    "duration_start": 0.0,
+    "duration_end": 10.009664,
+    "mathematical_reconciliation": {
+      "theoretical_generated": 15625,
+      "enqueued_node3": 15625,
+      "drops_flow2": 9688,
+      "received_server_flow2": 5937,
+      "accounted_packets": 15625,
+      "conservation_difference": 0
+    }
+  }
+}

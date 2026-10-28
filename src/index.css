@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-900: #0a0e1a;
+  --navy-800: #0f1528;
+  --navy-700: #141c36;
+  --navy-600: #1a2444;
+  --cyber-blue: #00b4d8;
+  --cyber-cyan: #00f5d4;
+  --cyber-red: #ef4444;
+  --cyber-amber: #f59e0b;
+  --cyber-green: #10b981;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--navy-900);
+  color: #e2e8f0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navy-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navy-600);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-blue);
+}
+
+/* Packet animation on SVG paths */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.packet-flow-normal {
+  stroke-dasharray: 5, 15;
+  animation: dash-flow 1.5s linear infinite;
+}
+.packet-flow-attack {
+  stroke-dasharray: 3, 8;
+  animation: dash-flow 0.4s linear infinite;
+}
+.packet-flow-blocked {
+  stroke-dasharray: 2, 10;
+  stroke: var(--cyber-red);
+  opacity: 0.4;
+}
+.packet-flow-mitigation {
+  stroke-dasharray: 5, 15;
+  animation: dash-flow 1.5s linear infinite;
+  stroke: var(--cyber-green);
+}
+
+/* Glow effects */
+.glow-blue {
+  filter: drop-shadow(0 0 6px rgba(0, 180, 216, 0.4));
+}
+.glow-red {
+  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.4));
+}
+.glow-green {
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.4));
+}
+.glow-cyan {
+  filter: drop-shadow(0 0 6px rgba(0, 245, 212, 0.4));
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 180, 216, 0.1);
+}
+
+/* Code block styling */
+.code-block {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--navy-900);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Status indicator pulse */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.status-pulse {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+/* Topology node hover */
+.topo-node {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.topo-node:hover {
+  filter: brightness(1.2);
+}
+
+/* Tab active indicator */
+.tab-active {
+  position: relative;
+}
+.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--cyber-blue);
+  border-radius: 1px;
+}
+
+/* Recharts tooltip custom */
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+/* Responsive table */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
