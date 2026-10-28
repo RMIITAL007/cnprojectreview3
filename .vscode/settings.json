@@ -7,6 +7,7 @@
   "cSpell.words": [
     "blackholing",
     "datagrams",
+    "dport",
     "Gbps",
     "goodput",
     "Goodput",
@@ -31,6 +32,7 @@
     "rishitmittal",
     "rtmodel",
     "sendp",
+    "sport",
     "switchport",
     "Switchport",
     "tshark",

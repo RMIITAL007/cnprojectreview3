@@ -28,6 +28,7 @@ def main() -> None:
     add_lab_arguments(parser)
     parser.add_argument("--destination-mac", required=True, help="Explicit frame destination; ff:ff:ff:ff:ff:ff is allowed for this demo.")
     args = parser.parse_args()
+    network = None
     try:
         network = validate_common(args)
         args.destination_mac = validate_mac(args.destination_mac, "destination MAC", allow_broadcast=True)

@@ -8,7 +8,9 @@ import sys
 import time
 from datetime import datetime
 
-from scapy.all import get_if_list
+from typing import NoReturn
+
+from scapy.all import get_if_list  # type: ignore
 
 
 MAX_PACKETS = 200
@@ -144,7 +146,7 @@ def run_plan(send_one, *, count: int, interval: float, max_duration: float) -> t
     return sent, time.monotonic() - started, interrupted
 
 
-def abort(message: str) -> None:
+def abort(message: str) -> NoReturn:
     """Show a uniform validation error and exit without sending traffic."""
     log(f"Configuration error: {message}")
     sys.exit(2)

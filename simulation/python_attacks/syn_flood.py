@@ -27,6 +27,7 @@ def main() -> None:
     parser.add_argument("--next-hop-mac", required=True, help="Unicast MAC of the local router gateway, or the server MAC for a same-subnet server.")
     parser.add_argument("--source-port-start", type=int, default=40000, help="First source port, 1024-65535 (default: 40000).")
     args = parser.parse_args()
+    network = None
     try:
         network = validate_common(args)
         args.server_ip = validate_lab_ip(args.server_ip, network, "server IP")

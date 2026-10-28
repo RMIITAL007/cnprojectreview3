@@ -43,6 +43,7 @@ def main() -> None:
     parser.add_argument("--attacker-mac", help="Sender MAC to advertise; defaults to the specified interface MAC.")
     parser.add_argument("--restore", action="store_true", help="Send legitimate ARP replies after stopping.")
     args = parser.parse_args()
+    network = None
 
     try:
         network = validate_common(args)
