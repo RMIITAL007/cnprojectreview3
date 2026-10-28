@@ -3,7 +3,7 @@
 
 import argparse
 
-from scapy.all import ARP, Ether, get_if_hwaddr, sendp
+from scapy.all import ARP, Ether, get_if_hwaddr, sendp  # type: ignore
 
 from common import (
     abort, add_lab_arguments, log, require_capture_privileges, run_plan,

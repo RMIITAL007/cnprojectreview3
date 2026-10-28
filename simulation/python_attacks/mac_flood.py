@@ -4,7 +4,7 @@
 import argparse
 import random
 
-from scapy.all import Ether, Raw, sendp
+from scapy.all import Ether, Raw, sendp  # type: ignore
 
 from common import (
     abort, add_lab_arguments, log, require_capture_privileges, run_plan,

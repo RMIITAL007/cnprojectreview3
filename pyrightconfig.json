@@ -1,0 +1,10 @@
+{
+  "include": [
+    "simulation"
+  ],
+  "extraPaths": [
+    "/opt/anaconda3/lib/python3.12/site-packages",
+    "simulation/python_attacks"
+  ],
+  "reportMissingImports": "none"
+}

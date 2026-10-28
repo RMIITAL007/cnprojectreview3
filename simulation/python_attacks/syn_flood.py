@@ -4,7 +4,7 @@
 import argparse
 import random
 
-from scapy.all import Ether, IP, TCP, get_if_addr, get_if_hwaddr, sendp
+from scapy.all import Ether, IP, TCP, get_if_addr, get_if_hwaddr, sendp  # type: ignore
 
 from common import (
     abort, add_lab_arguments, log, require_capture_privileges, run_plan,

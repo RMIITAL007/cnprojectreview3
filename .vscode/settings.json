@@ -1,5 +1,9 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.defaultInterpreterPath": "/opt/anaconda3/bin/python3",
+  "python.analysis.extraPaths": [
+    "/opt/anaconda3/lib/python3.12/site-packages",
+    "${workspaceFolder}/simulation/python_attacks"
+  ],
   "cSpell.words": [
     "blackholing",
     "datagrams",
